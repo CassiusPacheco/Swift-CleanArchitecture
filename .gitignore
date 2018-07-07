@@ -18,7 +18,6 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-*.xcworkspace
 */*.xcodeproj/xcuserdata/
 tmp/
 testData/

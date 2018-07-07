@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DependencyInjection/DependencyInjection.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Entities/Entities.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Data/Data.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Domain/Domain.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:App/App.xcodeproj">
+   </FileRef>
+</Workspace>
