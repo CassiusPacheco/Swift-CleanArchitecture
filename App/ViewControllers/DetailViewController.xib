@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Project" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="fhz-2D-nZ2" id="dap-n7-8me"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Qco-iu-q3T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a product name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhz-2D-nZ2">
+                    <rect key="frame" x="16" y="84" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvn-sp-7JP">
+                    <rect key="frame" x="164" y="146" width="46" height="30"/>
+                    <state key="normal" title="Create"/>
+                    <connections>
+                        <action selector="createButtonTouchUpInside" destination="-1" eventType="touchUpInside" id="Yox-OF-X05"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yt5-nc-PtU">
+                    <rect key="frame" x="161" y="208" width="53" height="30"/>
+                    <state key="normal" title="Print All"/>
+                    <connections>
+                        <action selector="printAllButtonTouchUpInside" destination="-1" eventType="touchUpInside" id="WcN-Wf-9uO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="0.61526150170000005" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vvn-sp-7JP" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="701-o0-AcV"/>
+                <constraint firstItem="yt5-nc-PtU" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="ANr-eJ-9yO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fhz-2D-nZ2" secondAttribute="trailing" constant="16" id="ERL-js-bnf"/>
+                <constraint firstItem="fhz-2D-nZ2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="64" id="FoG-nh-NPA"/>
+                <constraint firstItem="vvn-sp-7JP" firstAttribute="top" secondItem="fhz-2D-nZ2" secondAttribute="bottom" constant="32" id="GvG-0g-KU4"/>
+                <constraint firstItem="fhz-2D-nZ2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="MG8-fU-v4g"/>
+                <constraint firstItem="yt5-nc-PtU" firstAttribute="top" secondItem="vvn-sp-7JP" secondAttribute="bottom" constant="32" id="YzQ-BR-IfX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
