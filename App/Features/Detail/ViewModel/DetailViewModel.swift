@@ -9,8 +9,14 @@
 import Foundation
 import Domain
 
+protocol DetailCoordinatorDelegate: class {
+    
+    // define other routes from the detail screen
+}
+
 protocol DetailViewModelInterface {
     
+    var coordinator: DetailCoordinatorDelegate? { get set }
     var delegate: DetailViewModelDelegate? { get set }
     var textFieldInput: String { get set }
     
@@ -28,6 +34,7 @@ final class DetailViewModel: DetailViewModelInterface {
     private let productsUseCase: ProductsUseCaseInterface
     private let createProductUseCase: CreateProductUseCaseInterface
     
+    weak var coordinator: DetailCoordinatorDelegate?
     weak var delegate: DetailViewModelDelegate?
     
     var textFieldInput: String = ""
@@ -51,7 +58,7 @@ final class DetailViewModel: DetailViewModelInterface {
         
         print("\n--Printing all:\n")
         
-        self.productsUseCase.execute().forEach { (product) in
+        productsUseCase.execute().forEach { (product) in
             
             print(product.name)
         }

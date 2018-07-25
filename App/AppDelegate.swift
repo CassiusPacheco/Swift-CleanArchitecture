@@ -18,13 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
-        dependencyInjection.setup()
+        let mainWindow = UIWindow(frame: UIScreen.main.bounds)
+        self.window = mainWindow
         
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
+        dependencyInjection.setupWithMainWindow(mainWindow)
         
-        let coordinator = dependencyInjection.container.resolve(Coordinator.self)
-        coordinator.start(window)
+        var coordinator = dependencyInjection.container.resolve(AppCoordinatorInterface.self)
+        coordinator.window = window
+        coordinator.start()
         
         return true
     }

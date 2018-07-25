@@ -11,13 +11,13 @@ import DependencyInjection
 
 final class MainViewController: UIViewController {
     
-    private let coordinator: Coordinator
+    let viewModel: MainViewModelInterface
     
     // MARK: - Init methods
     
-    init(coordinator: Coordinator) {
+    init(viewModel: MainViewModelInterface) {
         
-        self.coordinator = coordinator
+        self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -31,6 +31,6 @@ final class MainViewController: UIViewController {
     
     @IBAction func detailViewControllerButtonTouchUpInside() {
         
-        self.coordinator.pushDetailViewController()
+        self.viewModel.detailViewControllerButtonTouchUpInside()
     }
 }

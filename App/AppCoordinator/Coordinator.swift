@@ -11,6 +11,5 @@ import UIKit
 
 protocol Coordinator {
     
-    func start(_ window: UIWindow)
-    func pushDetailViewController()
+    func start()
 }

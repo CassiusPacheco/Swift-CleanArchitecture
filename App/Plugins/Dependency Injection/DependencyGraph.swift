@@ -21,39 +21,80 @@ final class DependencyGraph {
         self.container = container
     }
     
-    func setup() {
+    func setupWithMainWindow(_ window: UIWindow) {
         
-        container.registerSingleton(Coordinator.self) { (di) -> Coordinator in
+        setupAppDelegate(window)
+        setupCoordinators()
+        setupServices()
+        setupPersistence()
+        setupRepositories()
+        setupUseCases()
+        setupViewModels()
+    }
+    
+    private func setupAppDelegate(_ window: UIWindow) {
+        
+        container.registerSingleton(UIWindow.self) { di -> UIWindow in
+            return window
+        }
+    }
+    
+    private func setupCoordinators() {
+        
+        container.registerSingleton(AppCoordinatorInterface.self) { di -> AppCoordinatorInterface in
             return AppCoordinator(container: di)
         }
+        
+        container.register(MainCoordinatorInterface.self) { di -> MainCoordinatorInterface in
+            return MainCoordinator(container: di)
+        }
+        
+        container.register(DetailCoordinatorInterface.self) { di -> DetailCoordinatorInterface in
+            return DetailCoordinator(container: di)
+        }
+    }
+    
+    private func setupServices() {
+        
+        container.register(ProductServiceInterface.self) { di -> ProductServiceInterface in
+            return ProductService()
+        }
+    }
+    
+    private func setupPersistence() {
         
         container.registerSingleton(CacheInterface.self) { _ -> CacheInterface in
             return Persistence(defaults: .standard)
         }
+    }
+    
+    private func setupRepositories() {
         
-        container.register(ProductServiceInterface.self) { (di) -> ProductServiceInterface in
-            return ProductService()
-        }
-        
-        container.register(ProductRepositoryInterface.self) { (di) -> ProductRepositoryInterface in
+        container.register(ProductRepositoryInterface.self) { di -> ProductRepositoryInterface in
             return ProductRepository(cache: di.resolve(CacheInterface.self))
         }
+    }
+    
+    private func setupUseCases() {
         
-        container.register(ProductsUseCaseInterface.self) { (di) -> ProductsUseCaseInterface in
+        container.register(ProductsUseCaseInterface.self) { di -> ProductsUseCaseInterface in
             return ProductsUseCase(repository: di.resolve(ProductRepositoryInterface.self))
         }
         
-        container.register(CreateProductUseCaseInterface.self) { (di) -> CreateProductUseCaseInterface in
+        container.register(CreateProductUseCaseInterface.self) { di -> CreateProductUseCaseInterface in
             return CreateProductUseCase(repository: di.resolve(ProductRepositoryInterface.self))
         }
+    }
+    
+    private func setupViewModels() {
         
-        container.register(DetailViewModelInterface.self) { (di) -> DetailViewModelInterface in
-            return DetailViewModel(productsUseCase: di.resolve(ProductsUseCaseInterface.self),
-                                   createProductUseCase: di.resolve(CreateProductUseCaseInterface.self))
+        container.register(MainViewModelInterface.self) { di -> MainViewModelInterface in
+            return MainViewModel()
         }
         
-        container.register(DetailViewController.self) { (di) -> DetailViewController in
-            return DetailViewController(viewModel: di.resolve(DetailViewModelInterface.self))
+        container.register(DetailViewModelInterface.self) { di -> DetailViewModelInterface in
+            return DetailViewModel(productsUseCase: di.resolve(ProductsUseCaseInterface.self),
+                                   createProductUseCase: di.resolve(CreateProductUseCaseInterface.self))
         }
     }
 }
