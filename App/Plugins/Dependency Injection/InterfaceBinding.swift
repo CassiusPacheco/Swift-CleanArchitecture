@@ -8,8 +8,11 @@
 
 import Foundation
 import Persistence
+import NetworkServices
 import Data
 
 extension Persistence: CacheInterface {}
 
 extension UserDefaults: UserDefaultsInterface {}
+
+extension ProductService: ProductServiceInterface {}

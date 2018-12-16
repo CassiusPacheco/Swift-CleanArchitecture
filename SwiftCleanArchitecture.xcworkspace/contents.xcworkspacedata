@@ -8,6 +8,9 @@
          location = "group:Plugins/DependencyInjection/DependencyInjection.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:Plugins/NetworkServices/NetworkServices.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Plugins/Persistence/Persistence.xcodeproj">
       </FileRef>
    </Group>

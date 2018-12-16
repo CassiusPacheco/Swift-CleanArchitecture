@@ -12,6 +12,7 @@ import Entities
 import Domain
 import Data
 import Persistence
+import NetworkServices
 
 final class DependencyGraph {
     
