@@ -11,6 +11,7 @@ import DependencyInjection
 import Entities
 import Domain
 import Data
+import Persistence
 
 final class DependencyGraph {
     
@@ -64,7 +65,7 @@ final class DependencyGraph {
     private func setupPersistence() {
         
         container.registerSingleton(CacheInterface.self) { _ -> CacheInterface in
-            return Persistence(defaults: .standard)
+            return Persistence(defaults: UserDefaults.standard)
         }
     }
     

@@ -7,20 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6AAAC12120F11572007D8CB1 /* DependencyInjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAAC12020F11572007D8CB1 /* DependencyInjection.framework */; };
-		6AAAC12220F11572007D8CB1 /* DependencyInjection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAAC12020F11572007D8CB1 /* DependencyInjection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AAAC12520F11572007D8CB1 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAAC12420F11572007D8CB1 /* Entities.framework */; };
-		6AAAC12620F11572007D8CB1 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAAC12420F11572007D8CB1 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AAAC12820F11572007D8CB1 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAAC12720F11572007D8CB1 /* Data.framework */; };
-		6AAAC12920F11572007D8CB1 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAAC12720F11572007D8CB1 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AAAC12B20F11572007D8CB1 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAAC12A20F11572007D8CB1 /* Domain.framework */; };
-		6AAAC12C20F11572007D8CB1 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAAC12A20F11572007D8CB1 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A3934EC21C65B7D00B12F8F /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934E721C65B6100B12F8F /* Persistence.framework */; };
+		6A3934ED21C65B7D00B12F8F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934E921C65B6100B12F8F /* Domain.framework */; };
+		6A3934EE21C65B7D00B12F8F /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934EA21C65B6100B12F8F /* Data.framework */; };
+		6A3934EF21C65B7D00B12F8F /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934E821C65B6100B12F8F /* Entities.framework */; };
+		6A3934F021C65B7D00B12F8F /* DependencyInjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934EB21C65B6100B12F8F /* DependencyInjection.framework */; };
+		6A3934F121C65B7D00B12F8F /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934DA21C6539D00B12F8F /* Persistence.framework */; };
+		6A3934F321C65BD800B12F8F /* InterfaceBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3934F221C65BD800B12F8F /* InterfaceBinding.swift */; };
 		6AAAC15720F1164E007D8CB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AAAC14520F1164E007D8CB1 /* Assets.xcassets */; };
 		6AAAC15820F1164E007D8CB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AAAC14620F1164E007D8CB1 /* LaunchScreen.storyboard */; };
 		6AAAC15D20F1164E007D8CB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAAC14D20F1164E007D8CB1 /* AppDelegate.swift */; };
 		6AB1364721081A53004084DC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1363021081A53004084DC /* AppCoordinator.swift */; };
 		6AB1364821081A53004084DC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1363121081A53004084DC /* Coordinator.swift */; };
-		6AB1364921081A53004084DC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1363421081A53004084DC /* Persistence.swift */; };
 		6AB1364A21081A53004084DC /* ProductNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1363621081A53004084DC /* ProductNetwork.swift */; };
 		6AB1364B21081A53004084DC /* DependencyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1363821081A53004084DC /* DependencyGraph.swift */; };
 		6AB1364C21081A53004084DC /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1363C21081A53004084DC /* DetailViewModel.swift */; };
@@ -51,10 +49,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6AAAC12C20F11572007D8CB1 /* Domain.framework in Embed Frameworks */,
-				6AAAC12920F11572007D8CB1 /* Data.framework in Embed Frameworks */,
-				6AAAC12220F11572007D8CB1 /* DependencyInjection.framework in Embed Frameworks */,
-				6AAAC12620F11572007D8CB1 /* Entities.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,12 +56,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A3934DA21C6539D00B12F8F /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A3934E721C65B6100B12F8F /* Persistence.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Persistence.framework; path = "../../../Library/Developer/Xcode/DerivedData/SwiftCleanArchitecture-bnuzbcdxftqrsrecbinwvpfbtlhx/Build/Products/Debug-iphoneos/Persistence.framework"; sourceTree = "<group>"; };
+		6A3934E821C65B6100B12F8F /* Entities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Entities.framework; path = "../../../Library/Developer/Xcode/DerivedData/SwiftCleanArchitecture-bnuzbcdxftqrsrecbinwvpfbtlhx/Build/Products/Debug-iphoneos/Entities.framework"; sourceTree = "<group>"; };
+		6A3934E921C65B6100B12F8F /* Domain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Domain.framework; path = "../../../Library/Developer/Xcode/DerivedData/SwiftCleanArchitecture-bnuzbcdxftqrsrecbinwvpfbtlhx/Build/Products/Debug-iphoneos/Domain.framework"; sourceTree = "<group>"; };
+		6A3934EA21C65B6100B12F8F /* Data.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Data.framework; path = "../../../Library/Developer/Xcode/DerivedData/SwiftCleanArchitecture-bnuzbcdxftqrsrecbinwvpfbtlhx/Build/Products/Debug-iphoneos/Data.framework"; sourceTree = "<group>"; };
+		6A3934EB21C65B6100B12F8F /* DependencyInjection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DependencyInjection.framework; path = "../../../Library/Developer/Xcode/DerivedData/SwiftCleanArchitecture-bnuzbcdxftqrsrecbinwvpfbtlhx/Build/Products/Debug-iphoneos/DependencyInjection.framework"; sourceTree = "<group>"; };
+		6A3934F221C65BD800B12F8F /* InterfaceBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceBinding.swift; sourceTree = "<group>"; };
 		6A57C7D820F1169100857A8B /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AAAC12020F11572007D8CB1 /* DependencyInjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyInjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAAC12320F11572007D8CB1 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AAAC12420F11572007D8CB1 /* Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AAAC12720F11572007D8CB1 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AAAC12A20F11572007D8CB1 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAAC13320F1164E007D8CB1 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		6AAAC13420F1164E007D8CB1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AAAC14520F1164E007D8CB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,7 +73,6 @@
 		6AAAC14E20F1164E007D8CB1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AB1363021081A53004084DC /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6AB1363121081A53004084DC /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		6AB1363421081A53004084DC /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		6AB1363621081A53004084DC /* ProductNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductNetwork.swift; sourceTree = "<group>"; };
 		6AB1363821081A53004084DC /* DependencyGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyGraph.swift; sourceTree = "<group>"; };
 		6AB1363C21081A53004084DC /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
@@ -94,10 +90,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AAAC12B20F11572007D8CB1 /* Domain.framework in Frameworks */,
-				6AAAC12820F11572007D8CB1 /* Data.framework in Frameworks */,
-				6AAAC12120F11572007D8CB1 /* DependencyInjection.framework in Frameworks */,
-				6AAAC12520F11572007D8CB1 /* Entities.framework in Frameworks */,
+				6A3934F021C65B7D00B12F8F /* DependencyInjection.framework in Frameworks */,
+				6A3934EE21C65B7D00B12F8F /* Data.framework in Frameworks */,
+				6A3934F121C65B7D00B12F8F /* Persistence.framework in Frameworks */,
+				6A3934ED21C65B7D00B12F8F /* Domain.framework in Frameworks */,
+				6A3934EC21C65B7D00B12F8F /* Persistence.framework in Frameworks */,
+				6A3934EF21C65B7D00B12F8F /* Entities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,12 +115,22 @@
 				6AAAC13520F1164E007D8CB1 /* App */,
 				6AAAC13220F1164E007D8CB1 /* AppTests */,
 				6AAAC12320F11572007D8CB1 /* App.app */,
-				6AAAC12A20F11572007D8CB1 /* Domain.framework */,
-				6AAAC12720F11572007D8CB1 /* Data.framework */,
-				6AAAC12420F11572007D8CB1 /* Entities.framework */,
-				6AAAC12020F11572007D8CB1 /* DependencyInjection.framework */,
 				6A57C7D820F1169100857A8B /* AppTests.xctest */,
+				6A3934D921C6539D00B12F8F /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		6A3934D921C6539D00B12F8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A3934E721C65B6100B12F8F /* Persistence.framework */,
+				6A3934E921C65B6100B12F8F /* Domain.framework */,
+				6A3934EA21C65B6100B12F8F /* Data.framework */,
+				6A3934E821C65B6100B12F8F /* Entities.framework */,
+				6A3934EB21C65B6100B12F8F /* DependencyInjection.framework */,
+				6A3934DA21C6539D00B12F8F /* Persistence.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		6AAAC13220F1164E007D8CB1 /* AppTests */ = {
@@ -161,19 +169,10 @@
 		6AB1363221081A53004084DC /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				6AB1363321081A53004084DC /* Database */,
-				6AB1363521081A53004084DC /* Network */,
 				6AB1363721081A53004084DC /* Dependency Injection */,
+				6AB1363521081A53004084DC /* Network */,
 			);
 			path = Plugins;
-			sourceTree = "<group>";
-		};
-		6AB1363321081A53004084DC /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				6AB1363421081A53004084DC /* Persistence.swift */,
-			);
-			path = Database;
 			sourceTree = "<group>";
 		};
 		6AB1363521081A53004084DC /* Network */ = {
@@ -188,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				6AB1363821081A53004084DC /* DependencyGraph.swift */,
+				6A3934F221C65BD800B12F8F /* InterfaceBinding.swift */,
 			);
 			path = "Dependency Injection";
 			sourceTree = "<group>";
@@ -376,8 +376,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AB1364721081A53004084DC /* AppCoordinator.swift in Sources */,
+				6A3934F321C65BD800B12F8F /* InterfaceBinding.swift in Sources */,
 				6AB1365E21081B39004084DC /* MainCoordinator.swift in Sources */,
-				6AB1364921081A53004084DC /* Persistence.swift in Sources */,
 				6AB1364C21081A53004084DC /* DetailViewModel.swift in Sources */,
 				6AB1365321081A6F004084DC /* DetailCoordinator.swift in Sources */,
 				6AB1364A21081A53004084DC /* ProductNetwork.swift in Sources */,

@@ -10,33 +10,26 @@ import Foundation
 import Entities
 
 public protocol ProductRepositoryInterface {
-    
     var products: [Product] { get }
-    
     func create(_ product: Product)
 }
 
 public class ProductRepository: ProductRepositoryInterface {
-    
     struct keys {
-
-        static let products: Key = "products"
+        static let products = "products"
     }
     
     private let cache: CacheInterface
     
     public init(cache: CacheInterface) {
-        
         self.cache = cache
     }
     
     public var products: [Product] {
-        
         return cache.decodedValue(for: keys.products) ?? []
     }
     
     public func create(_ product: Product) {
-        
         cache.saveEncoded(products + [product], for: keys.products)
     }
 }

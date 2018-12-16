@@ -8,26 +8,11 @@
 
 import Foundation
 
-public struct Key: Hashable, RawRepresentable, ExpressibleByStringLiteral {
-    
-    public var rawValue: String
-    
-    public init(rawValue: String) {
-        self.rawValue = rawValue
-    }
-    
-    public init(stringLiteral value: String) {
-        self.rawValue = value
-    }
-}
-
 public protocol CacheInterface {
-    
-    func save<Value>(_ value: Value?, for key: Key)
-    
-    func value<Value>(for key: Key) -> Value?
-    
-    func saveEncoded<Value: Encodable>(_ value: Value?, for key: Key)
-    
-    func decodedValue<Value: Decodable>(for key: Key) -> Value?
+    func removeValue(for key: String)
+    func save<Value>(_ value: Value?, for key: String)
+    func value<Value>(for key: String) -> Value?
+    func bool(for key: String) -> Bool
+    func saveEncoded<Value: Codable>(_ value: Value?, for key: String)
+    func decodedValue<Value: Codable>(for key: String) -> Value?
 }

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "Plugins">
+      <FileRef
+         location = "group:Plugins/Persistence/Persistence.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:DependencyInjection/DependencyInjection.xcodeproj">
    </FileRef>

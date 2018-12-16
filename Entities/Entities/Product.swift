@@ -9,11 +9,9 @@
 import Foundation
 
 public struct Product: Codable {
-    
     public let name: String
     
     public init(name: String) {
-        
         self.name = name
     }
 }
