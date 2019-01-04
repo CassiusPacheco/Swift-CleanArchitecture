@@ -16,3 +16,9 @@ public protocol CacheInterface {
     func saveEncoded<Value: Codable>(_ value: Value?, for key: String)
     func decodedValue<Value: Codable>(for key: String) -> Value?
 }
+
+public extension CacheInterface {
+    public static var appGroup: String {
+        return "group.com.cassiuspacheco.Swift-CleanArchitecture"
+    }
+}

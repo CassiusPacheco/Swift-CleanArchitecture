@@ -58,8 +58,8 @@ final class DependencyGraph {
     }
     
     private func setupPersistence() {
-            return Persistence(defaults: UserDefaults.standard)
         container.registerSingleton(CacheInterface.self) { _ in
+            return Persistence(defaults: UserDefaults(suiteName: Persistence.appGroup)!)
         }
     }
     

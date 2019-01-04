@@ -119,6 +119,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A2F96D821DEFE4500864087 /* AppIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppIntents.entitlements; sourceTree = "<group>"; };
+		6A2F96DE21DF0E1F00864087 /* AppIntentsUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppIntentsUI.entitlements; sourceTree = "<group>"; };
 		6A3934DA21C6539D00B12F8F /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3934F221C65BD800B12F8F /* InterfaceBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceBinding.swift; sourceTree = "<group>"; };
 		6A39354421C66E2600B12F8F /* NetworkServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,6 +385,7 @@
 		6AFDC44521DEDF7E00B9BB46 /* AppIntents */ = {
 			isa = PBXGroup;
 			children = (
+				6A2F96D821DEFE4500864087 /* AppIntents.entitlements */,
 				6AFDC44621DEDF7E00B9BB46 /* IntentHandler.swift */,
 				6AFDC44821DEDF7E00B9BB46 /* Info.plist */,
 			);
@@ -392,6 +395,7 @@
 		6AFDC45021DEDF7E00B9BB46 /* AppIntentsUI */ = {
 			isa = PBXGroup;
 			children = (
+				6A2F96DE21DF0E1F00864087 /* AppIntentsUI.entitlements */,
 				6AFDC45121DEDF7E00B9BB46 /* IntentViewController.swift */,
 				6AFDC45321DEDF7E00B9BB46 /* MainInterface.storyboard */,
 				6AFDC45621DEDF7E00B9BB46 /* Info.plist */,
@@ -530,6 +534,9 @@
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1010;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.Siri = {
 								enabled = 1;
 							};
@@ -542,9 +549,19 @@
 					};
 					6AFDC44321DEDF7E00B9BB46 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					6AFDC44C21DEDF7E00B9BB46 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					6AFDC46F21DEEB4D00B9BB46 = {
 						CreatedOnToolsVersion = 10.1;
@@ -921,6 +938,7 @@
 		6AFDC45E21DEDF7E00B9BB46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppIntentsUI/AppIntentsUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LT888MY4H;
 				INFOPLIST_FILE = AppIntentsUI/Info.plist;
@@ -943,6 +961,7 @@
 		6AFDC45F21DEDF7E00B9BB46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppIntentsUI/AppIntentsUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LT888MY4H;
 				INFOPLIST_FILE = AppIntentsUI/Info.plist;
@@ -964,6 +983,7 @@
 		6AFDC46121DEDF7E00B9BB46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppIntents/AppIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LT888MY4H;
 				INFOPLIST_FILE = AppIntents/Info.plist;
@@ -986,6 +1006,7 @@
 		6AFDC46221DEDF7E00B9BB46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AppIntents/AppIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LT888MY4H;
 				INFOPLIST_FILE = AppIntents/Info.plist;
