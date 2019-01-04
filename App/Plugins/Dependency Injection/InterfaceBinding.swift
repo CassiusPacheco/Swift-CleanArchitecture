@@ -10,9 +10,6 @@ import Foundation
 import Persistence
 import NetworkServices
 import Data
+import ExtensionIntents
 
-extension Persistence: CacheInterface {}
-
-extension UserDefaults: UserDefaultsInterface {}
-
-extension ProductService: ProductServiceInterface {}
+// Put all interface binding that are not contained in the `ExtensionIntents` here.

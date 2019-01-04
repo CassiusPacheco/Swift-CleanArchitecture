@@ -50,10 +50,6 @@
 		6AFDC4A021DEF2AC00B9BB46 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49621DEECDF00B9BB46 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6AFDC4A121DEF2AC00B9BB46 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49821DEECDF00B9BB46 /* NetworkServices.framework */; };
 		6AFDC4A221DEF2AC00B9BB46 /* NetworkServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49821DEECDF00B9BB46 /* NetworkServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AFDC4A321DEF2AC00B9BB46 /* ExtensionIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC46621DEE28E00B9BB46 /* ExtensionIntents.framework */; };
-		6AFDC4A421DEF2AC00B9BB46 /* ExtensionIntents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC46621DEE28E00B9BB46 /* ExtensionIntents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AFDC4A521DEF2AC00B9BB46 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A39354421C66E2600B12F8F /* NetworkServices.framework */; };
-		6AFDC4A621DEF2AC00B9BB46 /* NetworkServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A39354421C66E2600B12F8F /* NetworkServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6AFDC4A721DEF2AC00B9BB46 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934DA21C6539D00B12F8F /* Persistence.framework */; };
 		6AFDC4A821DEF2AC00B9BB46 /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934DA21C6539D00B12F8F /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6AFDC4B621DEF2F500B9BB46 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC4B421DEF2EB00B9BB46 /* Domain.framework */; };
@@ -114,8 +110,6 @@
 				6AFDC4BB21DEF2F500B9BB46 /* DependencyInjection.framework in Embed Frameworks */,
 				6AFDC4A221DEF2AC00B9BB46 /* NetworkServices.framework in Embed Frameworks */,
 				6AFDC4B921DEF2F500B9BB46 /* Data.framework in Embed Frameworks */,
-				6AFDC4A421DEF2AC00B9BB46 /* ExtensionIntents.framework in Embed Frameworks */,
-				6AFDC4A621DEF2AC00B9BB46 /* NetworkServices.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,8 +178,6 @@
 				6AFDC4BA21DEF2F500B9BB46 /* DependencyInjection.framework in Frameworks */,
 				6AFDC4A121DEF2AC00B9BB46 /* NetworkServices.framework in Frameworks */,
 				6AFDC4B821DEF2F500B9BB46 /* Data.framework in Frameworks */,
-				6AFDC4A321DEF2AC00B9BB46 /* ExtensionIntents.framework in Frameworks */,
-				6AFDC4A521DEF2AC00B9BB46 /* NetworkServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
