@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A2F96D721DEFA1200864087 /* InterfaceBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F96D621DEFA1200864087 /* InterfaceBinding.swift */; };
+		6A2F96D921DF010A00864087 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC4B521DEF2EB00B9BB46 /* Data.framework */; };
+		6A2F96DA21DF010A00864087 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934DA21C6539D00B12F8F /* Persistence.framework */; };
 		6A3934F321C65BD800B12F8F /* InterfaceBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3934F221C65BD800B12F8F /* InterfaceBinding.swift */; };
 		6A74424C21DEF45900F865FB /* ExtensionIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A74424B21DEF45900F865FB /* ExtensionIntents.framework */; };
 		6A74424D21DEF45900F865FB /* ExtensionIntents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A74424B21DEF45900F865FB /* ExtensionIntents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -119,6 +122,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A2F96D621DEFA1200864087 /* InterfaceBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceBinding.swift; sourceTree = "<group>"; };
 		6A2F96D821DEFE4500864087 /* AppIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppIntents.entitlements; sourceTree = "<group>"; };
 		6A2F96DE21DF0E1F00864087 /* AppIntentsUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppIntentsUI.entitlements; sourceTree = "<group>"; };
 		6A3934DA21C6539D00B12F8F /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +215,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A2F96D921DF010A00864087 /* Data.framework in Frameworks */,
+				6A2F96DA21DF010A00864087 /* Persistence.framework in Frameworks */,
 				6AFDC49721DEECDF00B9BB46 /* Entities.framework in Frameworks */,
 				6AFDC49921DEECDF00B9BB46 /* NetworkServices.framework in Frameworks */,
 			);
@@ -410,6 +416,7 @@
 				6AFDC48F21DEEC6600B9BB46 /* Intents.intentdefinition */,
 				6AFDC47321DEEB4D00B9BB46 /* Info.plist */,
 				6AFDC48E21DEEC6600B9BB46 /* CreateProductIntentHandler.swift */,
+				6A2F96D621DEFA1200864087 /* InterfaceBinding.swift */,
 				6AFDC48D21DEEC6600B9BB46 /* NSUserActivity+IntentData.swift */,
 			);
 			path = ExtensionIntents;
@@ -685,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AFDC49221DEEC6600B9BB46 /* Intents.intentdefinition in Sources */,
+				6A2F96D721DEFA1200864087 /* InterfaceBinding.swift in Sources */,
 				6AFDC49121DEEC6600B9BB46 /* CreateProductIntentHandler.swift in Sources */,
 				6AFDC49021DEEC6600B9BB46 /* NSUserActivity+IntentData.swift in Sources */,
 			);

@@ -8,6 +8,8 @@
 
 import Foundation
 import Entities
+import Data
+import Persistence
 import NetworkServices
 
 public final class CreateProductIntentHandler: NSObject, CreateProductIntentHandling {
@@ -18,8 +20,9 @@ public final class CreateProductIntentHandler: NSObject, CreateProductIntentHand
         }
 
         let product = Product(name: productName)
-        let productService = ProductService()
-        productService.create(product)
+        let persistence = Persistence(defaults: UserDefaults(suiteName: Persistence.appGroup)!)
+        let productRepository = ProductRepository(cache: persistence, service: ProductService())
+        productRepository.create(product)
 
         let userActivity = NSUserActivity(activityType: NSUserActivity.createProductActivityType)
         userActivity.addUserInfoEntries(from: [NSUserActivity.ActivityKeys.productName.rawValue: product.name])
