@@ -13,6 +13,8 @@ import DependencyInjection
 protocol AppCoordinatorInterface: Coordinator {
     var siriShortcutCoordinator: SiriShortcutCoordinatorInterface { get }
     var window: UIWindow! { get set }
+
+    func pushDetailViewController()
 }
 
 enum AppChild {
@@ -43,5 +45,14 @@ class AppCoordinator: AppCoordinatorInterface {
         
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+    }
+
+    func pushDetailViewController() {
+        let isDetailVisible = navigationController.viewControllers.contains(where: { controller -> Bool in
+            return controller is DetailViewController
+        })
+
+        guard let mainCoordinator = children[.main] as? MainCoordinatorInterface, !isDetailVisible else { return }
+        mainCoordinator.pushDetailViewController()
     }
 }
