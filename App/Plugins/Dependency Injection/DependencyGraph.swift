@@ -64,8 +64,9 @@ final class DependencyGraph {
     }
     
     private func setupRepositories() {
-            return ProductRepository(cache: di.resolve(CacheInterface.self))
         container.register(ProductRepositoryInterface.self) { di in
+            return ProductRepository(cache: di.resolve(CacheInterface.self),
+                                     service: di.resolve(ProductServiceInterface.self))
         }
     }
     

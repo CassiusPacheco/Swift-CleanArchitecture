@@ -20,9 +20,11 @@ public class ProductRepository: ProductRepositoryInterface {
     }
     
     private let cache: CacheInterface
+    private let service: ProductServiceInterface
     
-    public init(cache: CacheInterface) {
+    public init(cache: CacheInterface, service: ProductServiceInterface) {
         self.cache = cache
+        self.service = service
     }
     
     public var products: [Product] {
@@ -30,6 +32,7 @@ public class ProductRepository: ProductRepositoryInterface {
     }
     
     public func create(_ product: Product) {
+        service.create(product)
         cache.saveEncoded(products + [product], for: keys.products)
     }
 }
