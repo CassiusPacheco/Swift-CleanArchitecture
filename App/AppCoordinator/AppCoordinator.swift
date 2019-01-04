@@ -11,6 +11,7 @@ import UIKit
 import DependencyInjection
 
 protocol AppCoordinatorInterface: Coordinator {
+    var siriShortcutCoordinator: SiriShortcutCoordinatorInterface { get }
     var window: UIWindow! { get set }
 }
 
@@ -19,6 +20,7 @@ enum AppChild {
 }
 
 class AppCoordinator: AppCoordinatorInterface {
+    private(set) lazy var siriShortcutCoordinator: SiriShortcutCoordinatorInterface = SiriShortcutCoordinator(navigationController: navigationController)
     private(set) var navigationController: UINavigationController!
     private let container: DIContainer
     var children = [AppChild: Coordinator]()

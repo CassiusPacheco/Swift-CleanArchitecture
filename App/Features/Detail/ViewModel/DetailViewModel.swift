@@ -10,14 +10,19 @@ import Foundation
 import Domain
 
 protocol DetailCoordinatorDelegate: class {
-    // define other routes from the detail screen
+    // Define other routes from the detail screen.
+    // for example: func presentCreationConfirmationModal()
+
+    // The Siri Shortcut coordinator should be passed along to be used as the button's delegate.
+    var siriShortcutCoordinator: SiriShortcutCoordinatorInterface { get }
 }
 
 protocol DetailViewModelInterface {
     var coordinator: DetailCoordinatorDelegate? { get set }
     var delegate: DetailViewModelDelegate? { get set }
     var textFieldInput: String { get set }
-    
+    var shortcutButtonDelegate: SiriShortcutCoordinatorInterface? { get }
+
     func createButtonTouchUpInside()
     func printAllButtonTouchUpInside()
 }
@@ -34,6 +39,10 @@ final class DetailViewModel: DetailViewModelInterface {
     weak var delegate: DetailViewModelDelegate?
     
     var textFieldInput: String = ""
+
+    var shortcutButtonDelegate: SiriShortcutCoordinatorInterface? {
+        return coordinator?.siriShortcutCoordinator
+    }
     
     init(productsUseCase: ProductsUseCaseInterface, createProductUseCase: CreateProductUseCaseInterface) {
         self.productsUseCase = productsUseCase

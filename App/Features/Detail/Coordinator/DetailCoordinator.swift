@@ -48,6 +48,9 @@ final class DetailCoordinator: DetailCoordinatorInterface {
 }
 
 extension DetailCoordinator {
-    
     // MARK: - DetailCoordinatorDelegate methods
+
+    var siriShortcutCoordinator: SiriShortcutCoordinatorInterface {
+        return container.resolve(AppCoordinatorInterface.self).siriShortcutCoordinator
+    }
 }
