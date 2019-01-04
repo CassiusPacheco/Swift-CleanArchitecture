@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import IntentsUI
+import ExtensionIntents
 
 final class DetailViewController: UIViewController {
     @IBOutlet
@@ -34,6 +36,7 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createAddToSiriButton()
         textField.addTarget(self, action: #selector(textFieldCharacterDidChange), for: .editingChanged)
     }
     
@@ -52,6 +55,17 @@ final class DetailViewController: UIViewController {
     @objc
     private func textFieldCharacterDidChange() {
         viewModel.textFieldInput = textField.text ?? ""
+    }
+
+    private func createAddToSiriButton() {
+        // Note that this is a useless intent. The idea is just to show the concept working.
+        let intent = CreateProductIntent()
+        intent.name = "Test"
+        let shortcutButton = INUIAddVoiceShortcutButton(style: .whiteOutline)
+        shortcutButton.shortcut = INShortcut(intent: intent)
+        shortcutButton.delegate = viewModel.shortcutButtonDelegate
+
+        navigationItem.setRightBarButton(UIBarButtonItem(customView: shortcutButton), animated: true)
     }
 }
 

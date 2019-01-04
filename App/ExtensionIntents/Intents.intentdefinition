@@ -27,21 +27,6 @@
 			<string>CreateProduct</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
-				<key></key>
-				<dict>
-					<key>INIntentParameterCombinationIsPrimary</key>
-					<true/>
-					<key>INIntentParameterCombinationSubtitle</key>
-					<string></string>
-					<key>INIntentParameterCombinationSubtitleID</key>
-					<string>IUrCdW</string>
-					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<false/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>Create </string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>rsb0Xv</string>
-				</dict>
 				<key>name</key>
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
@@ -53,7 +38,7 @@
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
-					<string>Create ${name}</string>
+					<string>Create product ${name}</string>
 					<key>INIntentParameterCombinationTitleID</key>
 					<string>22je0c</string>
 				</dict>

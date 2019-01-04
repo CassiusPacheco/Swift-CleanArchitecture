@@ -8,6 +8,8 @@
 
 import UIKit
 import DependencyInjection
+import ExtensionIntents
+import os.log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         coordinator.window = window
         coordinator.start()
         
+        return true
+    }
+
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        guard userActivity.activityType == NSUserActivity.createProductActivityType ||
+            userActivity.activityType == NSStringFromClass(CreateProductIntent.self) else { return false }
+        
+        let coordinator = dependencyInjection.container.resolve(AppCoordinatorInterface.self)
+        coordinator.pushDetailViewController()
         return true
     }
 }
