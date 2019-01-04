@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Entities
 
 public protocol ProductServiceInterface: ServiceInterface {
-    
     // Some service code to fetch products or something
+    func create(_ product: Product)
 }

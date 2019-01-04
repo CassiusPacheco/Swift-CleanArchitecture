@@ -11,6 +11,7 @@
 		6A39353521C66D7100B12F8F /* NetworkServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A39353421C66D7100B12F8F /* NetworkServicesTests.swift */; };
 		6A39353721C66D7100B12F8F /* NetworkServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A39352921C66D7100B12F8F /* NetworkServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A39354121C66DCA00B12F8F /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A39354021C66DCA00B12F8F /* ProductService.swift */; };
+		6AFDC49C21DEEDE400B9BB46 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49B21DEEDE400B9BB46 /* Entities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		6A39353421C66D7100B12F8F /* NetworkServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicesTests.swift; sourceTree = "<group>"; };
 		6A39353621C66D7100B12F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A39354021C66DCA00B12F8F /* ProductService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		6AFDC49B21DEEDE400B9BB46 /* Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AFDC49C21DEEDE400B9BB46 /* Entities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +61,7 @@
 				6A39352821C66D7100B12F8F /* NetworkServices */,
 				6A39353321C66D7100B12F8F /* NetworkServicesTests */,
 				6A39352721C66D7100B12F8F /* Products */,
+				6AFDC49A21DEEDE400B9BB46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +91,14 @@
 				6A39353621C66D7100B12F8F /* Info.plist */,
 			);
 			path = NetworkServicesTests;
+			sourceTree = "<group>";
+		};
+		6AFDC49A21DEEDE400B9BB46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AFDC49B21DEEDE400B9BB46 /* Entities.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
