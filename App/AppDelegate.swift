@@ -11,7 +11,6 @@ import DependencyInjection
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     private lazy var dependencyInjection = DependencyGraph(container: DIContainer.shared)
 
     var window: UIWindow?

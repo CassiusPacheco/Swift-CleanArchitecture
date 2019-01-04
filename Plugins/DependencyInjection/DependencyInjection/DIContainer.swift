@@ -9,11 +9,9 @@
 import Foundation
 
 final public class DIContainer {
-    
     public static let shared = DIContainer()
     
     private var factories = [String: Any]()
-    
     private let lock = RecursiveLock()
     
     public func register<T>(_ type: T.Type, factory: @escaping ((DIContainer) -> T)) {

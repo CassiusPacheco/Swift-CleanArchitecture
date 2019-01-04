@@ -10,20 +10,15 @@ import Foundation
 import UIKit
 
 final class DetailViewController: UIViewController {
-
     @IBOutlet
     private var textField: UITextField!
-    
     private var viewModel: DetailViewModelInterface
     
     // MARK: - Init methods
     
     init(viewModel: DetailViewModelInterface) {
-        
         self.viewModel = viewModel
-        
         super.init(nibName: nil, bundle: nil)
-        
         self.viewModel.delegate = self
     }
     
@@ -32,44 +27,36 @@ final class DetailViewController: UIViewController {
     }
     
     deinit {
-        
         print("DetailViewController has been deallocated")
     }
     
     // MARK: - View life cycle
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
         textField.addTarget(self, action: #selector(textFieldCharacterDidChange), for: .editingChanged)
     }
     
     // MARK: - Action
 
     @IBAction
-    func createButtonTouchUpInside() {
-        
+    private func createButtonTouchUpInside() {
         viewModel.createButtonTouchUpInside()
     }
     
     @IBAction
-    func printAllButtonTouchUpInside() {
-        
+    private func printAllButtonTouchUpInside() {
         viewModel.printAllButtonTouchUpInside()
     }
     
     @objc
-    func textFieldCharacterDidChange() {
-        
+    private func textFieldCharacterDidChange() {
         viewModel.textFieldInput = textField.text ?? ""
     }
 }
 
 extension DetailViewController: DetailViewModelDelegate {
-    
     func productCreated() {
-        
         textField.text = nil
     }
 }

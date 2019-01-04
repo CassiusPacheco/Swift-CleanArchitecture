@@ -10,12 +10,10 @@ import Foundation
 import Domain
 
 protocol DetailCoordinatorDelegate: class {
-    
     // define other routes from the detail screen
 }
 
 protocol DetailViewModelInterface {
-    
     var coordinator: DetailCoordinatorDelegate? { get set }
     var delegate: DetailViewModelDelegate? { get set }
     var textFieldInput: String { get set }
@@ -25,12 +23,10 @@ protocol DetailViewModelInterface {
 }
 
 protocol DetailViewModelDelegate: NSObjectProtocol {
-    
     func productCreated()
 }
 
 final class DetailViewModel: DetailViewModelInterface {
-
     private let productsUseCase: ProductsUseCaseInterface
     private let createProductUseCase: CreateProductUseCaseInterface
     
@@ -40,26 +36,20 @@ final class DetailViewModel: DetailViewModelInterface {
     var textFieldInput: String = ""
     
     init(productsUseCase: ProductsUseCaseInterface, createProductUseCase: CreateProductUseCaseInterface) {
-        
         self.productsUseCase = productsUseCase
         self.createProductUseCase = createProductUseCase
     }
     
     func createButtonTouchUpInside() {
-        
-        guard textFieldInput.count > 0 else { return }
-        
+        guard !textFieldInput.isEmpty else { return }
         createProductUseCase.execute(textFieldInput)
-        
         delegate?.productCreated()
     }
     
     func printAllButtonTouchUpInside() {
-        
         print("\n--Printing all:\n")
         
         productsUseCase.execute().forEach { (product) in
-            
             print(product.name)
         }
         

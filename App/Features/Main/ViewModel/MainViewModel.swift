@@ -9,23 +9,18 @@
 import Foundation
 
 protocol MainCoordinatorDelegate: class {
-    
     func pushDetailViewController()
 }
 
 protocol MainViewModelInterface {
-    
     var coordinator: MainCoordinatorDelegate? { get set }
-    
     func detailViewControllerButtonTouchUpInside()
 }
 
 final class MainViewModel: MainViewModelInterface {
-    
     weak var coordinator: MainCoordinatorDelegate?
     
     func detailViewControllerButtonTouchUpInside() {
-        
-        self.coordinator?.pushDetailViewController()
+        coordinator?.pushDetailViewController()
     }
 }

@@ -11,23 +11,19 @@ import Entities
 import Data
 
 public protocol ProductsUseCaseInterface {
-    
     @discardableResult
     func execute() -> [Product]
 }
 
 public class ProductsUseCase: VoidUseCase<[Product]>, ProductsUseCaseInterface {
-    
     private let repository: ProductRepositoryInterface
     
     public init(repository: ProductRepositoryInterface) {
-        
         self.repository = repository
     }
     
     @discardableResult
     override public func execute() -> [Product] {
-        
         return repository.products
     }
 }

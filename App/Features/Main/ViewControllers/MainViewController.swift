@@ -10,27 +10,23 @@ import UIKit
 import DependencyInjection
 
 final class MainViewController: UIViewController {
-    
     let viewModel: MainViewModelInterface
     
     // MARK: - Init methods
     
     init(viewModel: MainViewModelInterface) {
-        
         self.viewModel = viewModel
-        
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        
         fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Action methods
     
-    @IBAction func detailViewControllerButtonTouchUpInside() {
-        
-        self.viewModel.detailViewControllerButtonTouchUpInside()
+    @IBAction
+    private func detailViewControllerButtonTouchUpInside() {
+        viewModel.detailViewControllerButtonTouchUpInside()
     }
 }
