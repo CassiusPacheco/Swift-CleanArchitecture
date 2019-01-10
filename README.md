@@ -37,3 +37,26 @@ This layer may have `ViewModels`, `Coordinators`, `ViewControllers`, `Views`, th
 ## Tests
 
 Even though I haven't written any tests yet, the whole project is completely testable, since all layers are being isolated by interfaces, as suggested by the SOLID principles.
+
+## Getting Started
+
+### Prerequisites
+- Xcode 10.1
+- iOS 12
+- Swift 4.2
+
+### Installing
+The project uses Carthage for dependency management. To install Carthage run in the Terminal:
+
+```
+$ brew update
+$ brew install carthage
+```
+
+In the Terminal, after installing Carthage, go to the project's root folder and run:
+
+```
+$ carthage update --platform iOS --no-use-binaries
+```
+
+You may now open `SwiftCleanArchitecture.xcworkspace`, select the `App` target and run it.
