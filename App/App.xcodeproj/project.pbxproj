@@ -12,6 +12,20 @@
 		6A2F96DA21DF010A00864087 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934DA21C6539D00B12F8F /* Persistence.framework */; };
 		6A2F96E021DF11AF00864087 /* SiriShortcutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F96DF21DF11AF00864087 /* SiriShortcutCoordinator.swift */; };
 		6A3934F321C65BD800B12F8F /* InterfaceBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3934F221C65BD800B12F8F /* InterfaceBinding.swift */; };
+		6A412DBF21E75E93009760EF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412D7F21E75908009760EF /* RxSwift.framework */; };
+		6A412DFF21E76280009760EF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412D7F21E75908009760EF /* RxSwift.framework */; };
+		6A412E1321E766CD009760EF /* DependencyInjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1221E766CD009760EF /* DependencyInjection.framework */; };
+		6A412E1421E766CD009760EF /* DependencyInjection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1221E766CD009760EF /* DependencyInjection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A412E1621E766CD009760EF /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1521E766CD009760EF /* NetworkServices.framework */; };
+		6A412E1721E766CD009760EF /* NetworkServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1521E766CD009760EF /* NetworkServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A412E1921E766CD009760EF /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1821E766CD009760EF /* Persistence.framework */; };
+		6A412E1A21E766CD009760EF /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1821E766CD009760EF /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A412E1C21E766CD009760EF /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1B21E766CD009760EF /* Entities.framework */; };
+		6A412E1D21E766CD009760EF /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1B21E766CD009760EF /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A412E1F21E766CD009760EF /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1E21E766CD009760EF /* Data.framework */; };
+		6A412E2021E766CD009760EF /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E1E21E766CD009760EF /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6A412E2221E766CD009760EF /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E2121E766CD009760EF /* Domain.framework */; };
+		6A412E2321E766CD009760EF /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412E2121E766CD009760EF /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A74424C21DEF45900F865FB /* ExtensionIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A74424B21DEF45900F865FB /* ExtensionIntents.framework */; };
 		6A74424D21DEF45900F865FB /* ExtensionIntents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A74424B21DEF45900F865FB /* ExtensionIntents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A74424E21DEF45900F865FB /* ExtensionIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A74424B21DEF45900F865FB /* ExtensionIntents.framework */; };
@@ -46,18 +60,6 @@
 		6AFDC49521DEEC7200B9BB46 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 6AFDC48F21DEEC6600B9BB46 /* Intents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		6AFDC49721DEECDF00B9BB46 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49621DEECDF00B9BB46 /* Entities.framework */; };
 		6AFDC49921DEECDF00B9BB46 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49821DEECDF00B9BB46 /* NetworkServices.framework */; };
-		6AFDC49F21DEF2AC00B9BB46 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49621DEECDF00B9BB46 /* Entities.framework */; };
-		6AFDC4A021DEF2AC00B9BB46 /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49621DEECDF00B9BB46 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AFDC4A121DEF2AC00B9BB46 /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49821DEECDF00B9BB46 /* NetworkServices.framework */; };
-		6AFDC4A221DEF2AC00B9BB46 /* NetworkServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC49821DEECDF00B9BB46 /* NetworkServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AFDC4A721DEF2AC00B9BB46 /* Persistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934DA21C6539D00B12F8F /* Persistence.framework */; };
-		6AFDC4A821DEF2AC00B9BB46 /* Persistence.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3934DA21C6539D00B12F8F /* Persistence.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AFDC4B621DEF2F500B9BB46 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC4B421DEF2EB00B9BB46 /* Domain.framework */; };
-		6AFDC4B721DEF2F500B9BB46 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC4B421DEF2EB00B9BB46 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AFDC4B821DEF2F500B9BB46 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC4B521DEF2EB00B9BB46 /* Data.framework */; };
-		6AFDC4B921DEF2F500B9BB46 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC4B521DEF2EB00B9BB46 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6AFDC4BA21DEF2F500B9BB46 /* DependencyInjection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC4B321DEF2EB00B9BB46 /* DependencyInjection.framework */; };
-		6AFDC4BB21DEF2F500B9BB46 /* DependencyInjection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDC4B321DEF2EB00B9BB46 /* DependencyInjection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,13 +105,13 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6AFDC4B721DEF2F500B9BB46 /* Domain.framework in Embed Frameworks */,
-				6AFDC4A021DEF2AC00B9BB46 /* Entities.framework in Embed Frameworks */,
+				6A412E2021E766CD009760EF /* Data.framework in Embed Frameworks */,
+				6A412E1D21E766CD009760EF /* Entities.framework in Embed Frameworks */,
 				6A74424D21DEF45900F865FB /* ExtensionIntents.framework in Embed Frameworks */,
-				6AFDC4A821DEF2AC00B9BB46 /* Persistence.framework in Embed Frameworks */,
-				6AFDC4BB21DEF2F500B9BB46 /* DependencyInjection.framework in Embed Frameworks */,
-				6AFDC4A221DEF2AC00B9BB46 /* NetworkServices.framework in Embed Frameworks */,
-				6AFDC4B921DEF2F500B9BB46 /* Data.framework in Embed Frameworks */,
+				6A412E1721E766CD009760EF /* NetworkServices.framework in Embed Frameworks */,
+				6A412E1A21E766CD009760EF /* Persistence.framework in Embed Frameworks */,
+				6A412E1421E766CD009760EF /* DependencyInjection.framework in Embed Frameworks */,
+				6A412E2321E766CD009760EF /* Domain.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +126,13 @@
 		6A3934DA21C6539D00B12F8F /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3934F221C65BD800B12F8F /* InterfaceBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceBinding.swift; sourceTree = "<group>"; };
 		6A39354421C66E2600B12F8F /* NetworkServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A412D7F21E75908009760EF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		6A412E1221E766CD009760EF /* DependencyInjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DependencyInjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A412E1521E766CD009760EF /* NetworkServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A412E1821E766CD009760EF /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A412E1B21E766CD009760EF /* Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A412E1E21E766CD009760EF /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A412E2121E766CD009760EF /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A57C7D820F1169100857A8B /* AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A74424B21DEF45900F865FB /* ExtensionIntents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ExtensionIntents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AAAC12320F11572007D8CB1 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,13 +180,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AFDC4B621DEF2F500B9BB46 /* Domain.framework in Frameworks */,
-				6AFDC49F21DEF2AC00B9BB46 /* Entities.framework in Frameworks */,
+				6A412E1321E766CD009760EF /* DependencyInjection.framework in Frameworks */,
+				6A412E1921E766CD009760EF /* Persistence.framework in Frameworks */,
+				6A412DBF21E75E93009760EF /* RxSwift.framework in Frameworks */,
 				6A74424C21DEF45900F865FB /* ExtensionIntents.framework in Frameworks */,
-				6AFDC4A721DEF2AC00B9BB46 /* Persistence.framework in Frameworks */,
-				6AFDC4BA21DEF2F500B9BB46 /* DependencyInjection.framework in Frameworks */,
-				6AFDC4A121DEF2AC00B9BB46 /* NetworkServices.framework in Frameworks */,
-				6AFDC4B821DEF2F500B9BB46 /* Data.framework in Frameworks */,
+				6A412E2221E766CD009760EF /* Domain.framework in Frameworks */,
+				6A412E1F21E766CD009760EF /* Data.framework in Frameworks */,
+				6A412E1621E766CD009760EF /* NetworkServices.framework in Frameworks */,
+				6A412E1C21E766CD009760EF /* Entities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A412DFF21E76280009760EF /* RxSwift.framework in Frameworks */,
 				6A2F96D921DF010A00864087 /* Data.framework in Frameworks */,
 				6A2F96DA21DF010A00864087 /* Persistence.framework in Frameworks */,
 				6AFDC49721DEECDF00B9BB46 /* Entities.framework in Frameworks */,
@@ -223,22 +234,29 @@
 			isa = PBXGroup;
 			children = (
 				6AAAC13520F1164E007D8CB1 /* App */,
-				6AAAC13220F1164E007D8CB1 /* AppTests */,
 				6AFDC44521DEDF7E00B9BB46 /* AppIntents */,
 				6AFDC45021DEDF7E00B9BB46 /* AppIntentsUI */,
+				6AAAC13220F1164E007D8CB1 /* AppTests */,
 				6AFDC47121DEEB4D00B9BB46 /* ExtensionIntents */,
 				6A3934D921C6539D00B12F8F /* Frameworks */,
 				6AAAC12320F11572007D8CB1 /* App.app */,
-				6A57C7D820F1169100857A8B /* AppTests.xctest */,
 				6AFDC44421DEDF7E00B9BB46 /* AppIntents.appex */,
 				6AFDC44D21DEDF7E00B9BB46 /* AppIntentsUI.appex */,
+				6A412E1E21E766CD009760EF /* Data.framework */,
+				6A412E1221E766CD009760EF /* DependencyInjection.framework */,
+				6A412E2121E766CD009760EF /* Domain.framework */,
+				6A412E1B21E766CD009760EF /* Entities.framework */,
 				6A74424B21DEF45900F865FB /* ExtensionIntents.framework */,
+				6A412E1521E766CD009760EF /* NetworkServices.framework */,
+				6A412E1821E766CD009760EF /* Persistence.framework */,
+				6A57C7D820F1169100857A8B /* AppTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
 		6A3934D921C6539D00B12F8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A412D7F21E75908009760EF /* RxSwift.framework */,
 				6AFDC4B421DEF2EB00B9BB46 /* Domain.framework */,
 				6AFDC4B521DEF2EB00B9BB46 /* Data.framework */,
 				6AFDC4B321DEF2EB00B9BB46 /* DependencyInjection.framework */,
@@ -438,6 +456,7 @@
 				6A26FB6920F0E54400CDA761 /* Sources */,
 				6A26FB6A20F0E54400CDA761 /* Frameworks */,
 				6A26FB6B20F0E54400CDA761 /* Resources */,
+				6A412D8121E75931009760EF /* ShellScript */,
 				6AFDC46321DEDF7E00B9BB46 /* Embed App Extensions */,
 				6AFDC4A921DEF2AD00B9BB46 /* Embed Frameworks */,
 			);
@@ -529,7 +548,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Cassius Pacheco";
 				TargetAttributes = {
 					6A26FB6C20F0E54400CDA761 = {
@@ -635,6 +654,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A412D8121E75931009760EF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A26FB6920F0E54400CDA761 /* Sources */ = {
@@ -858,6 +899,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LT888MY4H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -882,6 +927,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2LT888MY4H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1034,7 +1083,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1042,6 +1091,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = ExtensionIntents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1068,7 +1121,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1076,6 +1129,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = ExtensionIntents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

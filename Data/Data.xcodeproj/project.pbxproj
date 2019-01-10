@@ -15,6 +15,7 @@
 		6A26FC6D20F0FA5200CDA761 /* ServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A26FC6C20F0FA5200CDA761 /* ServiceInterface.swift */; };
 		6A26FC7A20F0FAF600CDA761 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A26FC7920F0FAF600CDA761 /* ProductRepository.swift */; };
 		6A26FC7C20F0FB0500CDA761 /* ProductServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A26FC7B20F0FB0500CDA761 /* ProductServiceInterface.swift */; };
+		6A412DFE21E7618C009760EF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A412DFD21E7618C009760EF /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		6A26FC6C20F0FA5200CDA761 /* ServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInterface.swift; sourceTree = "<group>"; };
 		6A26FC7920F0FAF600CDA761 /* ProductRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 		6A26FC7B20F0FB0500CDA761 /* ProductServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceInterface.swift; sourceTree = "<group>"; };
+		6A412DFD21E7618C009760EF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = ../Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A26FC5020F0E94800CDA761 /* Entities.framework in Frameworks */,
+				6A412DFE21E7618C009760EF /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +107,7 @@
 		6A26FC4E20F0E94800CDA761 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6A412DFD21E7618C009760EF /* RxSwift.framework */,
 				6A26FC4F20F0E94800CDA761 /* Entities.framework */,
 			);
 			name = Frameworks;
@@ -385,6 +389,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -414,6 +422,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Carthage/Build/iOS",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Data/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
