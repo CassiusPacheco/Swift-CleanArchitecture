@@ -49,5 +49,8 @@ test-output/
 #AppCode files
 .idea/
 
+#Carthage
+Carthage/
+
 #Others
 compile_time.txt
