@@ -24,11 +24,11 @@ enum AppChild {
 class AppCoordinator: AppCoordinatorInterface {
     private(set) lazy var siriShortcutCoordinator: SiriShortcutCoordinatorInterface = SiriShortcutCoordinator(navigationController: navigationController)
     private(set) var navigationController: UINavigationController!
-    private let container: DIContainer
+    private let container: DependencyInjector
     var children = [AppChild: Coordinator]()
     var window: UIWindow!
     
-    init(container: DIContainer) {
+    init(container: DependencyInjector) {
         self.container = container
     }
     

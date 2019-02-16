@@ -18,11 +18,11 @@ enum MainChild {
 }
 
 final class MainCoordinator: MainCoordinatorInterface {
-    let container: DIContainer
+    let container: DependencyInjector
     var children = [MainChild: Coordinator]()
     var navigationController: UINavigationController?
     
-    init(container: DIContainer) {
+    init(container: DependencyInjector) {
         self.container = container
     }
     

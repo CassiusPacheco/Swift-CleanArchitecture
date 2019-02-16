@@ -1,5 +1,5 @@
 //
-//  RecursiveLock.swift
+//  NSLocking.swift
 //  DependencyInjection
 //
 //  Created by Cassius Pacheco on 16/12/18.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-final class RecursiveLock {
-    private let lock = NSRecursiveLock()
-    
+extension NSLocking {
     @discardableResult
-    func sync<T>(action: () -> T) -> T {
-        lock.lock()
-        defer { lock.unlock() }
+    public func sync<T>(action: () -> T) -> T {
+        lock()
+
+        defer { self.unlock() }
+
         return action()
     }
 }

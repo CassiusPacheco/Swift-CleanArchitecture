@@ -18,7 +18,7 @@ public protocol CacheInterface {
 }
 
 public extension CacheInterface {
-    public static var appGroup: String {
+    static var appGroup: String {
         return "group.com.cassiuspacheco.Swift-CleanArchitecture"
     }
 }

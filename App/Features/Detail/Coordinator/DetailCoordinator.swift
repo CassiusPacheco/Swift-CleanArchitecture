@@ -14,10 +14,10 @@ protocol DetailCoordinatorInterface: Coordinator, DetailCoordinatorDelegate {
 }
 
 final class DetailCoordinator: DetailCoordinatorInterface {
-    let container: DIContainer
+    let container: DependencyInjector
     var navigationController: UINavigationController?
     
-    init(container: DIContainer) {
+    init(container: DependencyInjector) {
         self.container = container
     }
     

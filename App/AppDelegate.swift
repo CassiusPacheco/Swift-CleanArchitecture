@@ -13,7 +13,7 @@ import os.log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private lazy var dependencyInjection = DependencyGraph(container: DIContainer.shared)
+    private lazy var dependencyInjection = DependencyGraph(container: DependencyInjector())
 
     var window: UIWindow?
     

@@ -15,9 +15,9 @@ import Persistence
 import NetworkServices
 
 final class DependencyGraph {
-    let container: DIContainer
+    let container: DependencyInjector
     
-    init(container: DIContainer) {
+    init(container: DependencyInjector) {
         self.container = container
     }
     
