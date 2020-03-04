@@ -6,8 +6,9 @@
 //  Copyright © 2018 Cassius Pacheco. All rights reserved.
 //
 
+import UIKit
 import Foundation
-import DependencyInjection
+import DependencyInjector
 
 protocol MainCoordinatorInterface: Coordinator, MainCoordinatorDelegate {
     var navigationController: UINavigationController? { get set }

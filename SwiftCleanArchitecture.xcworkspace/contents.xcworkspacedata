@@ -5,23 +5,23 @@
       location = "container:"
       name = "Plugins">
       <FileRef
-         location = "group:Plugins/DependencyInjection/DependencyInjection.xcodeproj">
+         location = "group:Plugins/DependencyInjector">
       </FileRef>
       <FileRef
-         location = "group:Plugins/NetworkServices/NetworkServices.xcodeproj">
+         location = "group:Plugins/NetworkServices">
       </FileRef>
       <FileRef
-         location = "group:Plugins/Persistence/Persistence.xcodeproj">
+         location = "group:Plugins/Persistence">
       </FileRef>
    </Group>
    <FileRef
-      location = "group:Entities/Entities.xcodeproj">
+      location = "group:Entities">
    </FileRef>
    <FileRef
-      location = "group:Data/Data.xcodeproj">
+      location = "group:Data">
    </FileRef>
    <FileRef
-      location = "group:Domain/Domain.xcodeproj">
+      location = "group:Domain">
    </FileRef>
    <FileRef
       location = "group:App/App.xcodeproj">

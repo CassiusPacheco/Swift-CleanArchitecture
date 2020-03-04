@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import DependencyInjection
+import DependencyInjector
 import ExtensionIntents
 import os.log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private lazy var dependencyInjection = DependencyGraph(container: DependencyInjector())
+    private lazy var dependencyGraph = DependencyGraph(container: DependencyInjector())
 
     var window: UIWindow?
     
@@ -22,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainWindow = UIWindow(frame: UIScreen.main.bounds)
         self.window = mainWindow
         
-        dependencyInjection.setupWithMainWindow(mainWindow)
+        dependencyGraph.setupWithMainWindow(mainWindow)
         
-        var coordinator = dependencyInjection.container.resolve(AppCoordinatorInterface.self)
+        var coordinator = dependencyGraph.container.resolve(AppCoordinatorInterface.self)
         coordinator.window = window
         coordinator.start()
         
@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard userActivity.activityType == NSUserActivity.createProductActivityType ||
             userActivity.activityType == NSStringFromClass(CreateProductIntent.self) else { return false }
         
-        let coordinator = dependencyInjection.container.resolve(AppCoordinatorInterface.self)
+        let coordinator = dependencyGraph.container.resolve(AppCoordinatorInterface.self)
         coordinator.pushDetailViewController()
         return true
     }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DependencyInjection
+import DependencyInjector
 
 final class MainViewController: UIViewController {
     let viewModel: MainViewModelInterface

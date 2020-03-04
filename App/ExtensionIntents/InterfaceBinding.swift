@@ -12,7 +12,7 @@ import Persistence
 import NetworkServices
 
 // This is a separated file from App's because this usage is much simpler.
-// Note that the usage of the DependencyInjection framework is optional for
+// Note that the usage of the DependencyInjector framework is optional for
 // this framework since it shouldn't do much and shouldn't perform many operations.
 extension Persistence: CacheInterface {}
 

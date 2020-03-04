@@ -1,4 +1,4 @@
-# The Clean Architecture 
+# The Clean Architecture
 
 This sample project is inspired on [The Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) by Uncle Bob.
 
@@ -14,7 +14,7 @@ https://8thlight.com/blog/assets/posts/2012-08-13-the-clean-architecture/CleanAr
 In this sample app we have the following modules/layers:
 
 ### DependencyInjector
-		
+
 Framework responsible for linking the Interfaces to the `Factories`. This should only the referenced/used in the `App Module`.
 
 ### Entities
@@ -41,22 +41,11 @@ Even though I haven't written any tests yet, the whole project is completely tes
 ## Getting Started
 
 ### Prerequisites
-- Xcode 10.1
+- Xcode 11.3.1
 - iOS 12
-- Swift 4.2
+- Swift 5.1
 
 ### Installing
-The project uses Carthage for dependency management. To install Carthage run in the Terminal:
+The project uses Swift Package Manager for dependency management. Just open `SwiftCleanArchitecture.xcworkspace`, select the `App` target and run it.
 
-```
-$ brew update
-$ brew install carthage
-```
-
-In the Terminal, after installing Carthage, go to the project's root folder and run:
-
-```
-$ carthage update --platform iOS --no-use-binaries
-```
-
-You may now open `SwiftCleanArchitecture.xcworkspace`, select the `App` target and run it.
+To check out the legacy example built with Carthage, have a look at this [branch](https://github.com/CassiusPacheco/Swift-CleanArchitecture/tree/carthage).

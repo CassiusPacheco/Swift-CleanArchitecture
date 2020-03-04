@@ -6,8 +6,9 @@
 //  Copyright © 2018 Cassius Pacheco. All rights reserved.
 //
 
+import UIKit
 import Foundation
-import DependencyInjection
+import DependencyInjector
 import Entities
 import Domain
 import Data
@@ -58,14 +59,14 @@ final class DependencyGraph {
     }
     
     private func setupPersistence() {
-        container.registerSingleton(CacheInterface.self) { _ in
+        container.registerSingleton(Persistence.self) { _ in
             return Persistence(defaults: UserDefaults(suiteName: Persistence.appGroup)!)
         }
     }
     
     private func setupRepositories() {
         container.register(ProductRepositoryInterface.self) { di in
-            return ProductRepository(cache: di.resolve(CacheInterface.self),
+            return ProductRepository(cache: di.resolve(Persistence.self),
                                      service: di.resolve(ProductServiceInterface.self))
         }
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import DependencyInjection
+import DependencyInjector
 
 protocol AppCoordinatorInterface: Coordinator {
     var siriShortcutCoordinator: SiriShortcutCoordinatorInterface { get }
