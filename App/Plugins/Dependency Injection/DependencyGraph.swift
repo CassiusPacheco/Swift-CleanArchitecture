@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-import DependencyInjector
+import DependencyContainer
 import Entities
 import Domain
 import Data
@@ -16,9 +16,9 @@ import Persistence
 import NetworkServices
 
 final class DependencyGraph {
-    let container: DependencyInjector
+    let container: DependencyContainer
     
-    init(container: DependencyInjector) {
+    init(container: DependencyContainer) {
         self.container = container
     }
     
@@ -59,14 +59,14 @@ final class DependencyGraph {
     }
     
     private func setupPersistence() {
-        container.registerSingleton(Persistence.self) { _ in
+        container.registerSingleton(CacheInterface.self) { _ in
             return Persistence(defaults: UserDefaults(suiteName: Persistence.appGroup)!)
         }
     }
     
     private func setupRepositories() {
         container.register(ProductRepositoryInterface.self) { di in
-            return ProductRepository(cache: di.resolve(Persistence.self),
+            return ProductRepository(cache: di.resolve(CacheInterface.self),
                                      service: di.resolve(ProductServiceInterface.self))
         }
     }

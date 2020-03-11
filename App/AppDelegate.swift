@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import DependencyInjector
+import DependencyContainer
 import ExtensionIntents
 import os.log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private lazy var dependencyGraph = DependencyGraph(container: DependencyInjector())
+    private lazy var dependencyGraph = DependencyGraph(container: DependencyContainer())
 
     var window: UIWindow?
     

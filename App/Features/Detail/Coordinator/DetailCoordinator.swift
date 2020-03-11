@@ -8,17 +8,17 @@
 
 import UIKit
 import Foundation
-import DependencyInjector
+import DependencyContainer
 
 protocol DetailCoordinatorInterface: Coordinator, DetailCoordinatorDelegate {
     var navigationController: UINavigationController? { get set }
 }
 
 final class DetailCoordinator: DetailCoordinatorInterface {
-    let container: DependencyInjector
+    let container: DependencyContainer
     var navigationController: UINavigationController?
     
-    init(container: DependencyInjector) {
+    init(container: DependencyContainer) {
         self.container = container
     }
     

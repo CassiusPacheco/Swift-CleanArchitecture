@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "DependencyContainer",
+        "repositoryURL": "https://github.com/CassiusPacheco/DependencyContainer",
+        "state": {
+          "branch": null,
+          "revision": "15049d95d20dabca6337c4c63c1ff98f3b776e07",
+          "version": "0.1.0"
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {

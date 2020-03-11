@@ -8,7 +8,7 @@
 
 import UIKit
 import Foundation
-import DependencyInjector
+import DependencyContainer
 
 protocol MainCoordinatorInterface: Coordinator, MainCoordinatorDelegate {
     var navigationController: UINavigationController? { get set }
@@ -19,11 +19,11 @@ enum MainChild {
 }
 
 final class MainCoordinator: MainCoordinatorInterface {
-    let container: DependencyInjector
+    let container: DependencyContainer
     var children = [MainChild: Coordinator]()
     var navigationController: UINavigationController?
     
-    init(container: DependencyInjector) {
+    init(container: DependencyContainer) {
         self.container = container
     }
     

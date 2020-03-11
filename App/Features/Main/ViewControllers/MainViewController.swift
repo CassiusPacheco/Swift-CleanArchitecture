@@ -1,13 +1,13 @@
 //
 //  MainViewController.swift
-//  DependencyInjector
+//  DependencyContainer
 //
 //  Created by Cassius Pacheco on 7/7/18.
 //  Copyright © 2018 Cassius Pacheco. All rights reserved.
 //
 
 import UIKit
-import DependencyInjector
+import DependencyContainer
 
 final class MainViewController: UIViewController {
     let viewModel: MainViewModelInterface

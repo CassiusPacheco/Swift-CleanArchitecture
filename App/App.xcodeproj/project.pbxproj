@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A1DF8A5241E4B54003A584E /* DependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 6A1DF8A4241E4B54003A584E /* DependencyContainer */; };
 		6A2F96D721DEFA1200864087 /* InterfaceBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F96D621DEFA1200864087 /* InterfaceBinding.swift */; };
 		6A2F96E021DF11AF00864087 /* SiriShortcutCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F96DF21DF11AF00864087 /* SiriShortcutCoordinator.swift */; };
 		6A74424C21DEF45900F865FB /* ExtensionIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A74424B21DEF45900F865FB /* ExtensionIntents.framework */; };
@@ -30,7 +31,6 @@
 		6AAD2E32240FDBF6000E6B9A /* Persistence in Frameworks */ = {isa = PBXBuildFile; productRef = 6AAD2E31240FDBF6000E6B9A /* Persistence */; };
 		6AAD2E34240FDBF6000E6B9A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6AAD2E33240FDBF6000E6B9A /* RxSwift */; };
 		6AAD2E36240FE320000E6B9A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6AAD2E35240FE320000E6B9A /* RxSwift */; };
-		6AAD2E3B240FE443000E6B9A /* DependencyInjector in Frameworks */ = {isa = PBXBuildFile; productRef = 6AAD2E3A240FE443000E6B9A /* DependencyInjector */; };
 		6AAD2E3D240FE5C5000E6B9A /* InterfaceBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3934F221C65BD800B12F8F /* InterfaceBinding.swift */; };
 		6AB1364721081A53004084DC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1363021081A53004084DC /* AppCoordinator.swift */; };
 		6AB1364821081A53004084DC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB1363121081A53004084DC /* Coordinator.swift */; };
@@ -157,11 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A74424C21DEF45900F865FB /* ExtensionIntents.framework in Frameworks */,
-				6AAD2E3B240FE443000E6B9A /* DependencyInjector in Frameworks */,
 				6AAD2E1E240FD669000E6B9A /* RxCocoa in Frameworks */,
 				6AAD2E36240FE320000E6B9A /* RxSwift in Frameworks */,
 				6AAD2E1C240FD669000E6B9A /* RxRelay in Frameworks */,
 				6AAD2E22240FD999000E6B9A /* Entities in Frameworks */,
+				6A1DF8A5241E4B54003A584E /* DependencyContainer in Frameworks */,
 				6AAD2E2A240FDBC0000E6B9A /* Persistence in Frameworks */,
 				6AAD2E26240FDAE1000E6B9A /* Domain in Frameworks */,
 				6AAD2E28240FDBBC000E6B9A /* NetworkServices in Frameworks */,
@@ -439,7 +439,7 @@
 				6AAD2E27240FDBBC000E6B9A /* NetworkServices */,
 				6AAD2E29240FDBC0000E6B9A /* Persistence */,
 				6AAD2E35240FE320000E6B9A /* RxSwift */,
-				6AAD2E3A240FE443000E6B9A /* DependencyInjector */,
+				6A1DF8A4241E4B54003A584E /* DependencyContainer */,
 			);
 			productName = Project;
 			productReference = 6AAAC12320F11572007D8CB1 /* App.app */;
@@ -587,6 +587,7 @@
 			mainGroup = 6A26FB6420F0E54400CDA761;
 			packageReferences = (
 				6AAD2E16240FD669000E6B9A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				6A1DF8A3241E4B53003A584E /* XCRemoteSwiftPackageReference "DependencyContainer" */,
 			);
 			productRefGroup = 6A26FB6420F0E54400CDA761;
 			projectDirPath = "";
@@ -1163,6 +1164,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6A1DF8A3241E4B53003A584E /* XCRemoteSwiftPackageReference "DependencyContainer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CassiusPacheco/DependencyContainer";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.0;
+			};
+		};
 		6AAD2E16240FD669000E6B9A /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -1174,6 +1183,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6A1DF8A4241E4B54003A584E /* DependencyContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A1DF8A3241E4B53003A584E /* XCRemoteSwiftPackageReference "DependencyContainer" */;
+			productName = DependencyContainer;
+		};
 		6AAD2E19240FD669000E6B9A /* RxTest */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6AAD2E16240FD669000E6B9A /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -1239,10 +1253,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6AAD2E16240FD669000E6B9A /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		6AAD2E3A240FE443000E6B9A /* DependencyInjector */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DependencyInjector;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
